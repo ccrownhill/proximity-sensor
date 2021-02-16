@@ -2,30 +2,7 @@
 To execute this connect the output of an oscillator to pin 5.
 This script will measure the frequency of the square wave (from 5V to 0V) signal
 input to pin 5 and trigger a change in frequency.
-
-Problem: With pulseIn only frequencies of up to 50kHz can be measured
 ***********************************/
-
-//const int input = 11;
-//double pulseTime, frequency;
-//
-//void setup() {
-//  Serial.begin(9600);
-//  Serial.println("Proximity Sensor");
-//}
-//
-//void loop() {
-//  pulseTime = pulseIn(input, HIGH);
-//  Serial.print("Pulsetime: ");
-//  Serial.println(pulseTime);
-//
-//  frequency = 1.E6 / (2 * pulseTime);
-//
-//  Serial.println(frequency);
-//  delay(1000);
-//}
-
-
 
 
 // Timer and Counter example
