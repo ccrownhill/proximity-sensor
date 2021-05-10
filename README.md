@@ -15,8 +15,20 @@ To find out if a frequency changes you first need to be able to measure it. For 
 
 `proximity-sensor.ino` uses the one from One Transistor and then builds up logic on top of the frequency counting to trigger changes in frequency.
 
+The setup with the arduino is built according to this schematic:
+
+![arduino-schematic](./pictures/arduino_schematic.png)
+
+In reality this looks like this:
+
+![arduino-build](./pictures/top_view.jpg)
+
 ## Investigation on sensor circuit properties and behavior in different circumstances
 
 The scripts in `data-collection` are used to collect the raw data from the Hantek USB Oscilloscope using the [OpenHantek API](https://github.com/Ho-Ro/Hantek6022API) and extract frequency and voltage amplitude data from it.
 
 Then the data was interpreted and plotted with `plotting_and_regression.ipynb`.
+
+The circuit with the oscilloscope looks like this (here I just replaced the Schmitt-Trigger and the Arduino with an Oscilloscope):
+
+![oscilloscope-schematic](./pictures/oscilloscope_schematic.png)
