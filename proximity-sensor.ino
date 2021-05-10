@@ -1,17 +1,20 @@
-// Arduino frequency counter from a few Hz up to 6 MHz
-// One Transistor, 2018
-// https://www.onetransistor.eu/
-// 
-// Based on:
-//  * Frequency Counter sketch by Nick Gammon (CC BY 3.0 AU) 
-//    http://www.gammon.com.au/timers
-//  * FreqCounter library by Martin Nawrath (LGPL 2.1)
-//    http://interface.khm.de/index.php/lab/interfaces-advanced/arduino-frequency-counter-library/
+/*
+ * The code here comes largely from https://github.com/onetransistor/arduino-projects/blob/master/freq_count/freq_count.ino
+ * which is a frequency counter program for the arduino (from One Transistor, 2018, https://www.onetransistor.eu).
+ * This code here extends this program to trigger a certain change in frequency
+ * as indicated by three LEDs (the bigger the change, the more LEDs will light up)
+ *
+ * Input pin: 5 (signal of frequency up to 6 MHz)
+ * Button to set default frequency (the frequency all others will be compared to) upon press: 7
+ * Pins of LEDs to show if there is a change: 8, 9, 10
+ */
 
+// button to set the reference frequency to the currently measured frequency
 const int button = 7;
 int currentState;
 int lastState = HIGH;
 
+// connect LEDs to these pins
 const int led_pins[3] = {8, 9, 10}; 
 
 // this will be set upon button press
